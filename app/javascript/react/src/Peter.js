@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import Projects from './components/Projects'
+import Resume from './components/Resume'
 
 
 class Peter extends Component {
@@ -11,18 +16,13 @@ class Peter extends Component {
 
   render(){
     return(
-      <div class="container">
-        <div class="title">Peter Robitaille</div>
-          <a href="https://github.com/pwrobitaille"><div class="fa fa-github" aria-hidden="true"></div></a>
-          <a href="https://www.linkedin.com/in/pwrobitaille/"><div class="fa fa-linkedin" aria-hidden="true"></div></a>
-
-        <hr class="horizontal-line"></hr>
-
-        <div class="menu">
-          <span>About</span>
-          <span>Projects</span>
-          <span>Contact</span>
-        </div>
+      <div>
+        <Switch>
+          <Route path='/About' component={About} />
+          <Route path='/Projects' component={Projects} />
+          <Route path='/Resume' component={Resume} />
+          <Route path='/' component={Home}/>
+        </Switch>
       </div>
 
     )
