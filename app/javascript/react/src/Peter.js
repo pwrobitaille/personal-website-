@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Accordion, AccordionItem } from 'react-sanfona';
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
@@ -30,9 +31,21 @@ class Peter extends Component {
 
         <div className="menu-container">
           <div className="menu-grid">
-            <div className="about">About</div>
-            <div className="projects">Projects</div>
-            <div className="contact">Contact</div>
+            <Accordion>
+              <AccordionItem title="About">
+                <div><About /></div>
+              </AccordionItem>
+            </Accordion>
+            <Accordion>
+              <AccordionItem title="Projects">
+                <div><Projects /></div>
+              </AccordionItem>
+            </Accordion>
+            <Accordion>
+              <AccordionItem title="Contact">
+                <div><Contact /></div>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </div>
