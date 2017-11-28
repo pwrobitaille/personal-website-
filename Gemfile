@@ -14,6 +14,8 @@ gem 'webpacker'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem "font-awesome-rails"
+gem 'foundation-rails'
+
 
 
 group :development, :test do

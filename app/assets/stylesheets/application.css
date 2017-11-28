@@ -10,17 +10,61 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+
  *= require font-awesome
  *= require_tree .
  *= require_self
  */
 
+ .title-container {
+   margin-top: 100px;
+   display: flex;
+   justify-content: center;
+ }
 
  .title {
-   color: blue
+   color: blue;
+   font-size: 100px;
  }
 
- hr  {
-   color: red;
-   width: 10%;
+ .link-container {
+   display: flex;
+   justify-content: center;
  }
+
+ .link-grid {
+   width: 150px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .horizontal-line  {
+   color: red;
+   width: 30%;
+   text-align: center;
+ }
+
+
+.fa {
+  font-size: 50px;
+}
+
+.fa-linkedin {
+  color: blue;
+}
+
+.fa-github {
+  color: black;
+}
+
+.menu-container {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
+
+.menu-grid {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
