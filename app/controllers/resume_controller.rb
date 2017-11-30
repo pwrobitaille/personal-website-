@@ -1,4 +1,0 @@
-class ResumeController < ApplicationController
-
-
-end
