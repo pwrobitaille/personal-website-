@@ -75,15 +75,39 @@
 .about-container {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .about-grid {
-  width: 800px;
-  justify-content: center;
+  /*border: green solid;*/
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .about {
   font-size: 30px;
   display: flex;
+  justify-content: center;
+}
+
+.pic {
+  display: flex;
+  border-radius: 200px;
+  height: 250px;
+
+}
+
+.about-me {
+  margin-left: 20px;
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.contact-info {
+  display:flex;
   justify-content: center;
 }
