@@ -1,5 +1,0 @@
-class AboutController < ApplicationController
-
-
-
-end
