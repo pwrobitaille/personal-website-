@@ -16,15 +16,22 @@
  *= require_self
  */
 
+body {
+  background-color: #F2EADE;
+}
+
  .title-container {
-   margin-top: 100px;
+   margin-top: 50px;
    display: flex;
    justify-content: center;
  }
 
  .title {
-   color: blue;
+   color: #76112D;
    font-size: 100px;
+   /*font-family: 'Shrikhand', cursive;*/
+   /*font-family: 'Coustard', serif;*/
+   font-family: 'Boogaloo', cursive;
  }
 
  .link-container {
@@ -53,37 +60,94 @@
 }
 
 .fa-linkedin {
-  color: blue;
+  color: #76112D;
 }
 
 .fa-github {
-  color: black;
+  color: #76112D;
 }
 
-.menu-container {
-  display: flex;
-  font-size: 30px;
-  justify-content: center;
-}
+.resume {
+  text-decoration: none;
+  color: #1178B3;
+  font-family: 'Boogaloo', cursive;
 
-.menu-grid {
-  width: 400px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .about-container {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .about-grid {
+  /*border: green solid;*/
   width: 800px;
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .about {
   font-size: 30px;
   display: flex;
   justify-content: center;
+}
+
+.pic {
+  display: flex;
+  border-radius: 200px;
+  height: 250px;
+
+
+}
+
+.about-me {
+  margin-left: 20px;
+  color: #76112D;
+  /*font-family: 'Boogaloo', cursive;*/
+  font-family: 'Fira Sans Condensed', sans-serif;
+
+
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.email {
+  color: #1178B3;
+}
+
+.contact-info {
+  display:flex;
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  color: #76112D;
+  font-family: 'Boogaloo', cursive;
+
+}
+
+.project-title {
+  font-size: 20px;
+  color: #1178B3;
+  font-family: 'Boogaloo', cursive;
+
+}
+
+.project-text {
+  color: #76112D;
+  font-family: 'Fira Sans Condensed', sans-serif;
+
+}
+
+.source-code {
+  color: #1178B3;
+  font-family: 'Fira Sans Condensed', sans-serif;
+
 }

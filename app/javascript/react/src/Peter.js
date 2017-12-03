@@ -3,6 +3,8 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Resume from './components/Resume'
 import Modal from 'react-modal';
+// import resume from '../../../../app/assets/images/Peter-Robitaille-Resume-copy.pdf'
+
 
 const customStyles = {
   overlay : {
@@ -11,17 +13,19 @@ const customStyles = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(67, 145, 217, 0.75)'
+    backgroundColor   : 'rgba(54, 28, 32, 0.75)'
   },
   content : {
-    top                   : '30%',
+    borderRadius      : '25px',
+    top                   : '50%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
     padding                : '40px',
     // marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
-    width                 : '700px'
+    width                 : '700px',
+    backgroundColor       : 'rgb(242,234,222)'
 
   }
 };
@@ -35,16 +39,11 @@ class Peter extends React.Component {
     };
 
     this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   openModal() {
     this.setState({modalIsOpen: true});
-  }
-
-  afterOpenModal() {
-    this.subtitle.style.color = '#f00';
   }
 
   closeModal() {
@@ -60,7 +59,7 @@ class Peter extends React.Component {
 
            <div className="link-container">
              <div className="link-grid">
-               <div onClick={this.openModal}>Projects</div>
+               <div onClick={this.openModal} className="resume">Projects</div>
                <Modal
                  isOpen={this.state.modalIsOpen}
                  onAfterOpen={this.afterOpenModal}
@@ -68,16 +67,12 @@ class Peter extends React.Component {
                  style={customStyles}
                  contentLabel="Projects"
                  >
-                 <h2 ref={subtitle => this.subtitle = subtitle}>Projects</h2>
                   <Projects />
-                 <button onClick={this.closeModal}>close</button>
                </Modal>
                  <a href="https://github.com/pwrobitaille"><div className="fa fa-github" aria-hidden="true"></div></a>
                  <a href="https://www.linkedin.com/in/pwrobitaille/"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
-              <div>Resume</div>
+              <div><a href="Peter-Robitaille-Resume-copy.pdf" download="Peter-Robitaille-Resume-copy.pdf" className="resume">Resume</a></div>
             </div>
-            {/* </div>
-           </div> */}
          </div>
 
            <hr className="horizontal-line"></hr>
