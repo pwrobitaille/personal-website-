@@ -3,7 +3,6 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Resume from './components/Resume'
 import Modal from 'react-modal';
-// import resume from '../../../../app/assets/images/Peter-Robitaille-Resume-copy.pdf'
 
 
 const customStyles = {
@@ -52,7 +51,7 @@ class Peter extends React.Component {
 
   render() {
     return (
-        <div>
+        <div className="text">
           <div className="title-container">
             <div className="title">Peter Robitaille</div>
           </div>
@@ -69,9 +68,9 @@ class Peter extends React.Component {
                  >
                   <Projects />
                </Modal>
-                 <a href="https://github.com/pwrobitaille"><div className="fa fa-github" aria-hidden="true"></div></a>
-                 <a href="https://www.linkedin.com/in/pwrobitaille/"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
-              <div><a href="Peter-Robitaille-Resume-copy.pdf" download="Peter-Robitaille-Resume-copy.pdf" className="resume">Resume</a></div>
+                 <a href="https://github.com/pwrobitaille" target="_blank"><div className="fa fa-github" aria-hidden="true"></div></a>
+                 <a href="https://www.linkedin.com/in/pwrobitaille/" target="_blank"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
+              <div><a href="/Peter Robitaille Resume.pdf" target="_blank" className="resume">Resume</a></div>
             </div>
          </div>
 

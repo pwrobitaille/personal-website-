@@ -13,7 +13,7 @@ const Projects = props => {
           <div>email: concertsontour@gmail.com</div>
           <div>password: testconcertsontour</div>
         </div>
-      <p><a href="https://github.com/pwrobitaille/OnTour" className="source-code">Source Code</a></p>
+      <p><a href="https://github.com/pwrobitaille/OnTour" className="source-code" target="_blank">Source Code</a></p>
     </div>
   )
 }
