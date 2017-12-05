@@ -1,16 +1,22 @@
 import React from 'react'
-import Home from './components/Home'
 import About from './components/About'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 
 const Peter = props => {
   return (
-    <div>
-      <Switch>
-        <Route exact path='/About' component={About} />
-        <Route path='/' component={Home} />
-      </Switch>
+      <div className="text">
+        <div className="title-container">
+          <div className="title">Peter Robitaille</div>
+        </div>
+
+         <div className="link-container">
+           <div className="link-grid">
+             <a href="https://github.com/pwrobitaille" target="_blank"><div className="fa fa-github" aria-hidden="true"></div></a>
+             About
+             <a href="https://www.linkedin.com/in/pwrobitaille/" target="_blank"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
+          </div>
+       </div>
     </div>
   )
 }
