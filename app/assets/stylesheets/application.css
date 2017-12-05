@@ -23,7 +23,7 @@ body {
 }
 
 .text {
-  background-color: rgba(54, 54, 54, 0.5);
+  /*background-color: rgba(54, 54 , 54, 0.5);*/
   border-radius: 50px;
   margin: 0 275px;
   padding-bottom: 20px;
