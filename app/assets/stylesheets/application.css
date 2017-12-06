@@ -17,41 +17,51 @@
  */
 
 body {
-  background-color: #F2EADE;
+  background-image: url(annie-spratt-370971.jpg);
+  /*background-image: url(keith-misner-308.jpg);*/
+  background-size: cover;
 }
 
+.element {
+	height:100vh;
+  display: flex;
+	font-size: 20px;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+
  .title-container {
-   margin-top: 50px;
+   margin-top: 100px;
    display: flex;
    justify-content: center;
  }
 
  .title {
-   color: #76112D;
+   color: white;
    font-size: 100px;
-   /*font-family: 'Shrikhand', cursive;*/
-   /*font-family: 'Coustard', serif;*/
-   font-family: 'Boogaloo', cursive;
+   font-family: 'Lato', sans-serif;
+
  }
 
  .link-container {
    display: flex;
    justify-content: center;
+
  }
 
  .link-grid {
-   width: 400px;
+   width: 160px;
    font-size: 30px;
    display: flex;
    justify-content: space-between;
    align-items: center;
- }
-
-
- .horizontal-line  {
-   color: red;
-   width: 30%;
-   text-align: center;
  }
 
 
@@ -60,17 +70,62 @@ body {
 }
 
 .fa-linkedin {
-  color: #76112D;
+  color: #152A53;
 }
 
 .fa-github {
-  color: #76112D;
+  color: #152A53;
 }
 
-.resume {
-  text-decoration: none;
-  color: #1178B3;
-  font-family: 'Boogaloo', cursive;
+.navbar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-grid {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  width: 250px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.nav-text {
+  color: #890309;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.dot {
+  color: #890309;
+  font-size: 20px;
+}
+
+.scroll-link {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  align-items: flex-end;
+  margin-top: auto;
+  color: #152A53;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.fa-chevron-down {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: #152A53;
+}
+
+.fa-chevron-up {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: #152A53;
 
 }
 
@@ -81,73 +136,150 @@ body {
 }
 
 .about-grid {
-  /*border: green solid;*/
   width: 800px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  background-color: rgba(54, 54, 54, 0.6);
+  padding: 20px;
+  border-radius: 50px;
+
 }
 
 .about {
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
+
 }
 
 .pic {
   display: flex;
   border-radius: 200px;
   height: 250px;
-
-
 }
 
 .about-me {
   margin-left: 20px;
-  color: #76112D;
-  /*font-family: 'Boogaloo', cursive;*/
-  font-family: 'Fira Sans Condensed', sans-serif;
-
-
+  font-size: 16px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
 }
 
-.contact {
-  margin-top: 30px;
+.launch-link {
+  color: #890309;
 }
 
-.email {
-  color: #1178B3;
-}
-
-.contact-info {
-  display:flex;
+.projects-container {
+  display: flex;
   justify-content: center;
+  margin-top: 30px;
+
+}
+
+.projects-grid {
+  justify-content: center;
+  width: 800px;
+  background-color: rgba(54, 54, 54, 0.6);
+  padding: 20px;
+  border-radius: 50px;
 }
 
 .project {
   display: flex;
   justify-content: center;
   margin-top: -10px;
-  color: #76112D;
-  font-family: 'Boogaloo', cursive;
+  color: #152A53;
+  font-family: 'Lato', sans-serif;
 
 }
 
 .project-title {
-  font-size: 20px;
-  color: #1178B3;
-  font-family: 'Boogaloo', cursive;
+  font-size: 25px;
+  color: #152A53;
+  font-family: 'Lato', sans-serif;
 
 }
 
 .project-text {
-  color: #76112D;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  color: white;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
 
 }
 
 .source-code {
-  color: #1178B3;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #152A53;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+
+}
+
+.demo-account {
+  color: #890309;
+  font-size: 17px;
+
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 175px;
+
+}
+
+.contact-grid {
+  justify-content: center;
+  width: 300px;
+  background-color: rgba(54, 54, 54, 0.6);
+  padding: 20px;
+  border-radius: 50px;
+
+}
+
+.contact-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #152A53;
+  font-family: 'Lato', sans-serif;
+}
+
+.say-hi {
+  display:flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 20px;
+  color: #890309;
+
+}
+
+.resume {
+  color: #152A53;
+  font-family: 'Lato', sans-serif;
+}
+
+.email {
+  color: #152A53;
+}
+
+.contact-info {
+  display:flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 5px;
+
+}
+.contact-info-resume {
+  display:flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 5px;
+  margin-top: 20px;
 
 }

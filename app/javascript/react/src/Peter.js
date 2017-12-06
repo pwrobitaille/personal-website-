@@ -1,88 +1,117 @@
 import React, { Component } from 'react'
 import About from './components/About'
 import Projects from './components/Projects'
-import Resume from './components/Resume'
-import Modal from 'react-modal';
-// import resume from '../../../../app/assets/images/Peter-Robitaille-Resume-copy.pdf'
+import Contact from './components/Contact'
+import * as Scroll from 'react-scroll';
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+class Peter extends React.Component{
+  constructor (props){
+      super(props);
+      this.scrollToTop = this.scrollToTop.bind(this);
+  }
+
+  componentDidMount() {
+    Events.scrollEvent.register('begin', function() {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function() {
+      console.log("end", arguments);
+    });
+
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  scrollTo() {
+    scroller.scrollTo('scroll-to-element', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
+  }
+
+  scrollToWithContainer() {
+    let goToContainer = new Promise((resolve, reject) => {
+
+      Events.scrollEvent.register('end', () => {
+        resolve();
+        Events.scrollEvent.remove('end');
+      });
+
+      scroller.scrollTo('scroll-container', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      });
+
+    });
+
+    goToContainer.then(() =>
+        scroller.scrollTo('scroll-container-second-element', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+            containerId: 'scroll-container'
+        }));
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  }
+
+  render () {
+    return (
+      <div>
+        <div className="element">
+          <div className="home-page">
+            <div className="title-container">
+              <div className="title">Peter Robitaille</div>
+            </div>
+
+             <div className="link-container">
+               <div className="link-grid">
+                 <a href="https://github.com/pwrobitaille" target="_blank"><div className="fa fa-github" aria-hidden="true"></div></a>
+                 <a href="https://www.linkedin.com/in/pwrobitaille/" target="_blank"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
+              </div>
+           </div>
+           <div className="navbar-container">
+             <div className="navbar-grid">
+               <Link activeClass="active" className="nav-text" to="same" spy={true} smooth={true} duration={500} >About</Link>
+               <div className="dot">・</div>
+               <Link activeClass="active" className="nav-text" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
+               <div className="dot">・</div>
+               <Link activeClass="active" className="nav-text" to="contact" spy={true} smooth={true} duration={500} >Contact</Link>
+             </div>
+           </div>
+           <div className="scroll-link">About</div>
+           <Link activeClass="active" className="fa fa-chevron-down" to="same" spy={true} smooth={true} duration={500} ></Link>
+         </div>
+      </div>
+
+        <Element id="same" className="element">
+          <About />
+        </Element>
 
 
-const customStyles = {
-  overlay : {
-    position          : 'fixed',
-    top               : 0,
-    left              : 0,
-    right             : 0,
-    bottom            : 0,
-    backgroundColor   : 'rgba(54, 28, 32, 0.75)'
-  },
-  content : {
-    borderRadius      : '25px',
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    padding                : '40px',
-    // marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    width                 : '700px',
-    backgroundColor       : 'rgb(242,234,222)'
+        <Element id="projects" className="element">
+          <Projects />
+        </Element>
 
+        <Element id="contact" className="element">
+          <Contact scroll={this.scrollToTop}/>
+        </Element>
+
+        {/* <a onClick={this.scrollToTop} duration={500}>To the top!</a> */}
+
+      </div>
+    );
   }
 };
 
-class Peter extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      modalIsOpen: false
-    };
-
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
-
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
-
-  render() {
-    return (
-        <div>
-          <div className="title-container">
-            <div className="title">Peter Robitaille</div>
-          </div>
-
-           <div className="link-container">
-             <div className="link-grid">
-               <div onClick={this.openModal} className="resume">Projects</div>
-               <Modal
-                 isOpen={this.state.modalIsOpen}
-                 onAfterOpen={this.afterOpenModal}
-                 onRequestClose={this.closeModal}
-                 style={customStyles}
-                 contentLabel="Projects"
-                 >
-                  <Projects />
-               </Modal>
-                 <a href="https://github.com/pwrobitaille"><div className="fa fa-github" aria-hidden="true"></div></a>
-                 <a href="https://www.linkedin.com/in/pwrobitaille/"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
-              <div><a href="Peter-Robitaille-Resume-copy.pdf" download="Peter-Robitaille-Resume-copy.pdf" className="resume">Resume</a></div>
-            </div>
-         </div>
-
-           <hr className="horizontal-line"></hr>
-
-           <div>
-             <About />
-          </div>
-         </div>
-    );
-  }
-}
 
 export default Peter;
