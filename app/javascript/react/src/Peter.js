@@ -67,48 +67,46 @@ class Peter extends React.Component{
   render () {
     return (
       <div>
-        <nav className="navbar navbar-default navbar-fixed-top">
-          <div className="container-fluid">
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <div className="nav navbar-nav">
-                <Link activeClass="active" className="about-text" to="same" spy={true} smooth={true} duration={500} >About</Link>
-                <Link activeClass="active" className="projects" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
-                <Link activeClass="active" className="contact" to="contact" spy={true} smooth={true} duration={500} >Contact</Link>
-              </div>
+        <div className="element">
+          <div className="home-page">
+            <div className="title-container">
+              <div className="title">Peter Robitaille</div>
             </div>
-          </div>
-        </nav>
-        <div className="text element">
-          <div className="title-container">
-            <div className="title">Peter Robitaille</div>
-          </div>
 
-           <div className="link-container">
-             <div className="link-grid">
-               <a href="https://github.com/pwrobitaille" target="_blank"><div className="fa fa-github" aria-hidden="true"></div></a>
-               About
-               <a href="https://www.linkedin.com/in/pwrobitaille/" target="_blank"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
-            </div>
+             <div className="link-container">
+               <div className="link-grid">
+                 <a href="https://github.com/pwrobitaille" target="_blank"><div className="fa fa-github" aria-hidden="true"></div></a>
+                 <a href="https://www.linkedin.com/in/pwrobitaille/" target="_blank"><div className="fa fa-linkedin" aria-hidden="true"></div></a>
+              </div>
+           </div>
+           <div className="navbar-container">
+             <div className="navbar-grid">
+               <Link activeClass="active" className="nav-text" to="same" spy={true} smooth={true} duration={500} >About</Link>
+               <div className="dot">・</div>
+               <Link activeClass="active" className="nav-text" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
+               <div className="dot">・</div>
+               <Link activeClass="active" className="nav-text" to="contact" spy={true} smooth={true} duration={500} >Contact</Link>
+             </div>
+           </div>
+           <div className="scroll-link">About</div>
+           <Link activeClass="active" className="fa fa-chevron-down" to="same" spy={true} smooth={true} duration={500} ></Link>
          </div>
-         <Link activeClass="active" className="about-text" to="same" spy={true} smooth={true} duration={500} >About</Link>
       </div>
 
         <Element id="same" className="element">
           <About />
-          <Link activeClass="active" className="projects" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
         </Element>
 
 
         <Element id="projects" className="element">
           <Projects />
-          <Link activeClass="active" className="contact" to="contact" spy={true} smooth={true} duration={500} >Contact</Link>
         </Element>
 
         <Element id="contact" className="element">
-          <Contact />
+          <Contact scroll={this.scrollToTop}/>
         </Element>
 
-        <a onClick={this.scrollToTop} duration={500}>To the top!</a>
+        {/* <a onClick={this.scrollToTop} duration={500}>To the top!</a> */}
 
       </div>
     );
