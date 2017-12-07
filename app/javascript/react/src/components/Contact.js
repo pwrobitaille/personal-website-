@@ -15,16 +15,20 @@ const Contact = props => {
             <div className="contact-info">
               <div>(978) 505-2753</div>
             </div>
-            <div className="contact-info-resume">
+            <div className="contact-info-email">
               <div><a href="mailto:pwrobitaille@gmail.com" className="email">pwrobitaille@gmail.com</a></div>
             </div>
+          <div className="contact-info-grid">
             <div className="contact-info-resume">
+              <div><a href="https://github.com/pwrobitaille" target="_blank"><div id="logo" className="fa fa-github" aria-hidden="true"></div></a></div>
               <div><a href="/Peter Robitaille Resume.pdf" target="_blank" className="resume">Resume</a></div>
+              <div><a href="https://www.linkedin.com/in/pwrobitaille/" target="_blank"><div id="logo" className="fa fa-linkedin" aria-hidden="true"></div></a></div>
             </div>
+          </div>
         </div>
       </div>
-      <div className="scroll-link">Home</div>
-      <a onClick={props.scroll} duration={500} className="fa fa-chevron-up"></a>
+        <div className="scroll-link">Home</div>
+        <a onClick={props.scroll} duration={500} className="fa fa-chevron-up"></a>
     </div>
   )
 }
