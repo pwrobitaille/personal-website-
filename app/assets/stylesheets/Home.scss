@@ -1,0 +1,132 @@
+* {
+   box-sizing: border-box;
+}
+
+
+body {
+ /*background-image: url(annie-spratt-370971.jpg);*/
+ background-image: url(199055-OYH6N5-733.jpg);
+ background-size: cover;
+}
+
+.element {
+ height:100vh;
+ display: flex;
+ font-size: 20px;
+}
+
+.home-page {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding-bottom: 20px;
+ width: 100%;
+}
+
+
+.title-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 100px;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.developer-grid {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.link-grid {
+  width: 160px;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.fa {
+ font-size: 50px;
+}
+
+.fa-linkedin {
+ color: #152A53;
+}
+
+.fa-github {
+ color: #152A53;
+}
+
+.navbar-container {
+ display: flex;
+ justify-content: center;
+}
+
+.navbar-grid {
+ display: flex;
+ font-size: 20px;
+ justify-content: space-between;
+ width: 350px;
+ padding: 10px;
+ margin-top: 10px;
+}
+
+.nav-text {
+ color: #890309;
+ font-family: 'Raleway', sans-serif;
+ font-weight: bold;
+ font-size: 30px;
+}
+
+.nav-text:hover {
+ color: #152A53;
+
+}
+
+.dot {
+ color: #890309;
+ font-size: 25px;
+}
+
+.scroll-link {
+ display: flex;
+ justify-content: center;
+ flex: 1 1 auto;
+ align-items: flex-end;
+ margin-top: auto;
+ color: #152A53;
+ font-family: 'Lato', sans-serif;
+ font-size: 25px;
+
+}
+
+.fa-chevron-down {
+ font-size: 30px;
+ display: flex;
+ justify-content: center;
+ color: #152A53;
+}
+
+.fa-chevron-up {
+ font-size: 30px;
+ display: flex;
+ justify-content: center;
+ color: #152A53;
+
+}

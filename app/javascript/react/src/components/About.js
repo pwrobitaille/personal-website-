@@ -1,25 +1,28 @@
 import React from 'react'
 import headshot from '../../../../../app/assets/images/peter-headshot.jpg'
+import Skills from '../containers/Skills.js'
 import * as Scroll from 'react-scroll';
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 class About extends React.Component {
   constructor() {
     super();
 
     this.state = {
+      skillsArray: ["Ruby on Rails", "JavaScript", "React.js", "HTML", "CSS", "PostgreSQL", "Git/GitHub", "Responsive Design", "Agile Workflow", "Pair Programming"]
     };
   }
 
   render() {
 
-    // let skillsArray = ["Ruby on Rails", "JavaScript", "React.js", "HTML", "CSS", "PostgreSQL", "Git/GitHub", "Responsive Design", "Agile Workflow", "Pair Programming"]
-    //
-    // let skills = this.skillsArray.map(skill => {
-    //   return(
-    //     skill
-    //   )
-    // })
+    let skills = this.state.skillsArray.map(skill => {
+      return(
+        <Skills
+          skill={skill}
+        />
+      )
+    })
 
     return(
       <div className="home-page">
@@ -35,23 +38,14 @@ class About extends React.Component {
               Fun fact: I'm on Spotify! I was in a band in high school and we were able to record an album of originals. Check it out! (Don't worry, only the first song is in spanish)
               <br />
               <br />
-              <iframe src="https://open.spotify.com/embed/album/04gqWWBnr9UPVpob4tN2Si" width="300" height="100" frameborder="0" allowtransparency="true"></iframe>
+              <iframe className="spotify" src="https://open.spotify.com/embed/album/04gqWWBnr9UPVpob4tN2Si" height="100" frameborder="0" allowtransparency="true"></iframe>
             </div>
           </div>
           <div className="skills-learning-container">
             <div className="skills-grid">
               <div className="skills-title">Skills</div>
               <div className="skills">
-                <div className="skills-name">Ruby on Rails</div>
-                <div className="skills-name">JavaScript</div>
-                <div className="skills-name">React.js</div>
-                <div className="skills-name">HTML</div>
-                <div className="skills-name">CSS</div>
-                <div className="skills-name">PostgreSQL</div>
-                <div className="skills-name">Git/GitHub</div>
-                <div className="skills-name">Responsive Design</div>
-                <div className="skills-name">Agile Workflow</div>
-                <div className="skills-name">Pair Programming</div>
+                <div className="skills-loop">{skills}</div>
               </div>
             </div>
             <div className="skills-grid">
@@ -64,7 +58,6 @@ class About extends React.Component {
         </div>
       <div className="scroll-link">Projects</div>
       <Link activeClass="active" className="fa fa-chevron-down" to="projects" spy={true} smooth={true} duration={500}></Link>
-
     </div>
     )
   }
