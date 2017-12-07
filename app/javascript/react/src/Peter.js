@@ -72,7 +72,7 @@ class Peter extends React.Component{
             <div className="title-container">
               <div className="title">Peter Robitaille</div>
             </div>
-
+            <div className="developer-grid">Full Stack Developer</div>
              <div className="link-container">
                <div className="link-grid">
                  <a href="https://github.com/pwrobitaille" target="_blank"><div className="fa fa-github" aria-hidden="true"></div></a>
