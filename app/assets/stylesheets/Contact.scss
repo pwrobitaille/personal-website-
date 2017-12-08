@@ -5,12 +5,11 @@
 }
 
 .contact-grid {
-  /*justify-content: center;*/
   width: 300px;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 20px;
   border-radius: 25px;
-
+  margin-bottom: 20px;
 }
 
 .contact-header {
@@ -76,7 +75,13 @@
 }
 
 #logo {
-  font-size: 2vw;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+  #logo {
+
+  }
 }
 
 .fa-link {

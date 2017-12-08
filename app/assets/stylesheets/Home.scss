@@ -15,6 +15,12 @@ body {
  font-size: 20px;
 }
 
+@media only screen and (max-width: 1224px) {
+  .element {
+    height: 100%
+  }
+}
+
 .home-page {
  display: flex;
  flex-direction: column;
@@ -34,7 +40,15 @@ body {
   color: white;
   font-size: 100px;
   font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin: 0 10px;
 
+}
+
+@media only screen and (max-width: 568px) {
+  .title {
+    font-size: 80px;
+  }
 }
 
 .developer-grid {
@@ -107,13 +121,12 @@ body {
 .scroll-link {
  display: flex;
  justify-content: center;
- flex: 1 1 auto;
+ // flex: 1 1 auto;
  align-items: flex-end;
  margin-top: auto;
  color: #152A53;
  font-family: 'Lato', sans-serif;
  font-size: 25px;
-
 }
 
 .fa-chevron-down {
