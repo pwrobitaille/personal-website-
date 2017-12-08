@@ -15,13 +15,19 @@ const Projects = props => {
               <a href="http://www.concertsontour.com" target="_blank" className="project-title">OnTour</a>
                 <div className="project-text">
                 <p>OnTour is an interactive app that lets users document and track their concert history. Users can enter concert details such as band, venue, opener, and attendees and view data points like total concerts, top artist and top venue.</p>
-                <p className="demo-account">Demo Account:</p>
-                <div>email: concertsontour@gmail.com</div>
-                <div>password: testconcertsontour</div>
               </div>
-            <div className="icon-grid">
-              <a href="https://github.com/pwrobitaille/OnTour" target="_blank"><div id="logo" className="fa fa-github" aria-hidden="true"></div></a>
-              <a href="http://www.concertsontour.com" target="_blank"><div id="logo" className="fa fa-link" aria-hidden="true"></div></a>
+              <div>
+                <div className="demo-account">Demo Account:</div>
+                <div className="test">
+                  <div className="float-test">
+                  <div className="email-password">email: concertsontour@gmail.com</div>
+                  <div className="email-password">password: testconcertsontour</div>
+                </div>
+                  <div className="project-icons">
+                    <a href="https://github.com/pwrobitaille/OnTour" target="_blank"><div id="logo" className="fa fa-github icon" aria-hidden="true"></div></a>
+                    <a href="http://www.concertsontour.com" target="_blank"><div id="logo" className="fa fa-link icon" aria-hidden="true"></div></a>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
