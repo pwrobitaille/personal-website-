@@ -1,7 +1,6 @@
 .projects-container {
   display: flex;
   justify-content: center;
-  /*margin-top: 20px;*/
 }
 
 .projects-grid {
@@ -13,6 +12,21 @@
   margin-bottom: 10px;
 }
 
+@media only screen and (max-height: 625px) {
+  .projects-grid {
+    width: 500px;
+  }
+  .project-icons {
+    width: 50px;
+    float: right;
+  }
+  .float-test {
+    float: left;
+  }
+
+}
+
+
 @media only screen and (max-width: 568px) {
   .projects-grid {
     width: 90%;
@@ -20,6 +34,7 @@
   .project-image {
     margin: auto;
   }
+
   img {
     width: 90%;
     height: 100%;
@@ -59,16 +74,29 @@ img {
 }
 
 
-
-.source-code {
-  color: #890309;
-  font-size: 16px;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: bold;
-
-}
-
 .demo-account {
   color: #890309;
   font-size: 17px;
+  display: flex;
+  font-family: 'Fira Sans', sans-serif;
+
+}
+
+.email-password {
+  display: flex;
+  color: #152A53;
+  font-size: 14px;
+  font-family: 'Fira Sans', sans-serif;
+
+}
+
+.project-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.icon {
+  margin-right: 10px;
 }

@@ -78,12 +78,6 @@
   font-size: 18px;
 }
 
-@media only screen and (max-width: 768px) {
-  #logo {
-
-  }
-}
-
 .fa-link {
   font-size: 25px;
   color: #152A53;
@@ -92,7 +86,6 @@
 .icon-grid {
   display: flex;
   justify-content: space-around;
-  /*border: blue solid;*/
   width: 75px;
   margin-top: 20px;
 }
