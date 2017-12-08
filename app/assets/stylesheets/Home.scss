@@ -50,6 +50,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .nav-tect {
+    font-size: 25px;
+  }
+}
+
 .developer-grid {
   display: flex;
   justify-content: center;
@@ -93,7 +99,6 @@ body {
 
 .navbar-grid {
  display: flex;
- font-size: 20px;
  justify-content: space-between;
  width: 350px;
  padding: 10px;
@@ -105,6 +110,7 @@ body {
  font-family: 'Raleway', sans-serif;
  font-weight: bold;
  font-size: 30px;
+
 }
 
 .nav-text:hover {
