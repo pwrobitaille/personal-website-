@@ -106,8 +106,6 @@ class Peter extends React.Component{
           <Contact scroll={this.scrollToTop}/>
         </Element>
 
-        {/* <a onClick={this.scrollToTop} duration={500}>To the top!</a> */}
-
       </div>
     );
   }
