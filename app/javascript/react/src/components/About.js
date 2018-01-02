@@ -53,6 +53,8 @@ class About extends React.Component {
               <div className="skills-title">Learning</div>
               <div className="skills">
                 <div className="skills-name">Python </div>
+                <div className="skills-name">React Native </div>
+                <div className="skills-name">Mobile Responsive Development </div>
               </div>
             </div>
           </div>
