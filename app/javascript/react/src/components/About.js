@@ -10,7 +10,7 @@ class About extends React.Component {
     super();
 
     this.state = {
-      skillsArray: ["Ruby on Rails", "JavaScript", "React.js", "HTML", "CSS", "PostgreSQL", "Git/GitHub", "Responsive Design", "Agile Workflow", "Pair Programming"]
+      skillsArray: ["JavaScript", "React.js", "Ruby", "Ruby on Rails", "React Native", "Redux", "HTML", "CSS", "PostgreSQL", "Git/GitHub", "Responsive Design", "Agile Workflow", "Pair Programming"]
     };
   }
 
@@ -53,8 +53,6 @@ class About extends React.Component {
               <div className="skills-title">Learning</div>
               <div className="skills">
                 <div className="skills-name">Python </div>
-                <div className="skills-name">React Native </div>
-                <div className="skills-name">Mobile Responsive Development </div>
               </div>
             </div>
           </div>

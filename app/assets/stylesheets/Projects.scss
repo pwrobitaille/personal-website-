@@ -1,6 +1,8 @@
 .projects-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 
 .projects-grid {
