@@ -115,7 +115,7 @@ body {
 
 .nav-text:hover {
  color: #152A53;
-
+ cursor: pointer
 }
 
 .dot {
@@ -138,6 +138,7 @@ body {
  display: flex;
  justify-content: center;
  color: #152A53;
+ cursor: pointer
 }
 
 .fa-chevron-up {
@@ -145,5 +146,5 @@ body {
  display: flex;
  justify-content: center;
  color: #152A53;
-
+ cursor: pointer
 }
